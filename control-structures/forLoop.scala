@@ -12,6 +12,16 @@ for (i <- 1 to 4)
 for (i<-0 until 4)
     println("Iteration "+i)
 
+/*
+the for (i<- 1 to 4)
+is equal to (1).to(2) 
+
+because the receiver of the method call which is (1) is specified explicitly, 
+therefore the dot could be ignored 
+what's more, the to method only takes in one parameters, so the parenthesis could also be ignored
+
+*/
+
 
 // filter
 for (file <- filesHere if file.getName.endsWith(".scala"))

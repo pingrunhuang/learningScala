@@ -29,7 +29,7 @@ object FileMatcher {
 object FileMatcher {
     private def lsFiles = (new java.io.File(".")).listFiles
 
-
+    // this method take in two parameters: query for matching and a function that take in a string and return a boolean
     def filesMatching(query: String, matcher: (String => Boolean)) {
         for (file<-lsFiles; if matcher(file))
             yield file
@@ -44,8 +44,17 @@ object FileMatcher {
     }
 }
 
-
-insert into test values ('2011', '111111', '2016/04/01 00:00:00','是','2016-04-18 09:35:01','2017-03-31 23:59:59','无','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','是');
-
-
-
+// check if there are negatives inside
+def containNeg(arr: List):Boolean{
+    var exists = false
+    for (n <- nums){
+        if (n<0){
+            exists = true
+        }
+    }
+    exists
+}
+// scala way
+def containNeg2(arr:List):Boolean{
+    arr.exists(_<0)
+}
