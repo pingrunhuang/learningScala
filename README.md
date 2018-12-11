@@ -10,3 +10,6 @@
 
 #### uniform access principle
 invoking parameterless method withou parentheses can either call the function literal `val` or the method `def`. This way the client code does not need to modify even the source code change from `def` to `val` or the other way. 
+
+
+#### use transient lazy val for efficient serialization task
