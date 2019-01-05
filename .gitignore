@@ -3,3 +3,4 @@
 .idea/
 learningScala.iml
 target
+src/test/resources
